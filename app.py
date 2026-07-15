@@ -40,7 +40,7 @@ def cargar_sistema():
     corpus_df["texto_completo"] = corpus_df["titles"] + ". " + corpus_df["abstracts"]
 
     embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-    embeddings_file = "embeddings_corpus.npy"
+    embeddings_file = "embedings/embeddings_corpus.npy"
 
     if os.path.exists(embeddings_file):
         embeddings_corpus = np.load(embeddings_file)
